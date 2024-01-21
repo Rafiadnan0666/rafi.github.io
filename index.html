@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="img/1ca40abe-b8e8-4f28-8732-5055ccf139a1-removebg-preview.png"
+    />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>027</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        min-height: 100vh;
+      }
+      .back {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        background-color: black;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        filter: brightness(10px);
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-light sticky-top text-black"
+      data-aos="fade-up"
+    >
+      <div class="container">
+        <!-- Brand logo -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="img/1ca40abe-b8e8-4f28-8732-5055ccf139a1-removebg-preview.png"
+            width="40px"
+          />
+        </a>
+
+        <button
+          class="btn bg-transparent d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <i class="fa-solid fa-bars" style="color: white"></i>
+        </button>
+
+        <!-- Main navigation menu -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-black" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#kurs">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="#gur">News</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-black"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Plans
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="dataanal.html">data analyst</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="digital anal.html"
+                    >digital analyst</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="digital anal.html"
+                    >digital marketing</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="software.html"
+                    >digital analyst</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="3dart.html">3d art</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <a href="" class="p-2 text-white"
+          ><i class="fa fa-magnifying-glass"></i
+        ></a>
+        <a href="" class="p-2 text-white"
+          ><i class="fa-regular fa-circle-user"></i
+        ></a>
+      </div>
+    </nav>
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div class="offcanvas-header z-2">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div
+        class="offcanvas-body text-black d-lg-none"
+        style="display: block; height: 100vh"
+      >
+        <ul>
+          <li type="none"><a href="index.html">Home</a></li>
+          <li type="none"><a href="#kurs">Gallery</a></li>
+          <li type="none"><a href="gur">News</a></li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog bg-dark"
+        ="style"
+        ="
+          display: grid;
+          place-items: center;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div class="modal-content bg-dark">
+          <div class="container1 bg-dark">
+            <div class="form-container">
+              <p class="title">Login</p>
+              <!-- <form class="form"> -->
+              <div class="input-group">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Enter your username"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter your password"
+                  required
+                />
+                <div class="forgot">
+                  <a rel="noopener noreferrer" href="#">Forgot Password?</a>
+                </div>
+              </div>
+              <button class="sign" type="submit" id="sub">Sign in</button>
+              <!-- </form> -->
+              <div class="social-message">
+                <div class="line"></div>
+                <p class="message">Login with social accounts</p>
+                <div class="line"></div>
+              </div>
+              <div class="social-icons">
+                <button aria-label="Log in with Google" class="icon">
+                  <i class="fa-brands fa-discord" style="color: #ffffff"></i>
+                </button>
+                <button aria-label="Log in with Twitter" class="icon">
+                  <i class="fa-brands fa-discord" style="color: #ffffff"></i>
+                </button>
+                <button aria-label="Log in with GitHub" class="icon">
+                  <i class="fa-brands fa-discord" style="color: #ffffff"></i>
+                </button>
+              </div>
+              <p class="signup">
+                Don't have an account?
+                <a rel="noopener noreferrer" href="#" class="">Sign up</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="d-grid align-content-center justify-content-center">
+      <video
+        autoplay
+        loop
+        muted
+        src="img/27th Generation Film Dokumenter __ PONDOK MODERN AL-GHOZALI.mp4"
+        class="back"
+      ></video>
+      <h1 class="text-white" style="font-size: 72px">27 Generation</h1>
+      <button class="rounded-5 btn btn-outline-light">See More</button>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-lg-4 p-2 text-center rounded-3"
+          style="backdrop-filter: blur(20px)"
+        >
+          <h1 class="text-white">kontol</h1>
+        </div>
+        <div
+          class="col-lg-4 p-2 text-center rounded-3"
+          style="backdrop-filter: blur(20px)"
+        >
+          <h1 class="text-white">kontol</h1>
+        </div>
+        <div
+          class="col-lg-4 p-2 text-center rounded-3"
+          style="backdrop-filter: blur(20px)"
+        >
+          <h1 class="text-white">KONTOL</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-light pt-4">
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card " style="width: 25rem">
+              <img src="img/IMG_9242.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                  <div class="col-lg-6">
+                    <p class="card-text ">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card " style="width: 25rem">
+              <img src="img/IMG_9242.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                  <div class="col-lg-6">
+                    <p class="card-text ">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card " style="width: 25rem">
+              <img src="img/IMG_9242.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                  <div class="col-lg-6">
+                    <p class="card-text ">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="caontaner-fluid" style="min-height: 65vh;">
+        <div class="card border-0">
+          <div class="card-body border-0">
+            <div class="row">
+              <div class="col-lg-4"><p>27 Generation</p></div>
+              <div class="col-lg-4"><p>When created, when played, every game will be touched by AI. See how Unity Muse can transform the way you create.</p></div>
+              <div class="col-lg-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
